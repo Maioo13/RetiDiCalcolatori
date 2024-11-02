@@ -1,0 +1,585 @@
+/*! HTML5 Boilerplate v9.0.1 | MIT License | https://html5boilerplate.com/ */
+
+/* main.css 3.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+body {
+  font-family: Arial;
+  margin: 0;
+  padding: 0;
+  background-size: cover;
+  background-image: url('/FASTER-THAN-BORA.png'); /* Immagine di sfondo */
+  background-repeat: repeat; /* Ripeti sia orizzontalmente che verticalmente */
+  background-position: top left; /* Inizia a ripetere dall'angolo in alto a sinistra */
+
+}
+
+p {
+  font-size: large;
+  background-color: white;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden,
+[hidden] {
+  display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.visually-hidden {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */
+}
+
+/*
+ * Extends the .visually-hidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visually-hidden.focusable:active,
+.visually-hidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+  visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * The use of `table` rather than `block` is only necessary if using
+ * `::before` to contain the top-margins of child elements.
+ */
+
+.clearfix::before,
+.clearfix::after {
+  content: "";
+  display: table;
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+  (-webkit-min-device-pixel-ratio: 1.25),
+  (min-resolution: 1.25dppx),
+  (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+  *,
+  *::before,
+  *::after {
+    background: #fff !important;
+    color: #000 !important;
+    /* Black prints faster */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+
+  /*
+   * Don't show links that are fragment identifiers,
+   * or use the `javascript:` pseudo protocol
+   */
+  a[href^="#"]::after,
+  a[href^="javascript:"]::after {
+    content: "";
+  }
+
+  pre {
+    white-space: pre-wrap !important;
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+
+/* Impostazioni aggiuntive per rendere il sito più "professionale" */
+.navbar {
+  display: flex;
+  justify-content: space-between; /* Logo a sinistra, hamburger a destra */
+  align-items: center;
+  background-color: #FFFFFF;
+  padding: 10px 20px;
+}
+
+.logo img {
+  height: 70px;
+}
+
+.menu {
+  font-weight: bold;
+  font-size: Medium;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+}
+
+.menu li {
+  margin-left: 20px;
+}
+
+.menu a {
+  color: black;
+  text-decoration: none;
+  padding: 10px 15px;
+  display: block;
+  transition: background-color 0.3s;
+}
+
+.menu a:hover {
+  color: white;
+  background-color: #ae0e16;
+  border-radius: 5px;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.contenuto-dropdown {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: #ae0e16;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.contenuto-dropdown a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.contenuto-dropdown a:hover {
+  background-color: #000000;
+}
+
+.dropdown:hover .contenuto-dropdown {
+  display: block;
+}
+
+.icona-hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.icona-hamburger span {
+  background-color: black;
+  height: 4px;
+  width: 25px;
+  margin: 4px 0;
+  transition: 0.4s;
+}
+
+@media (max-width: 925px) {
+
+  .logo img {
+    height: 8vw;
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+  }
+
+  .navbar {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .menu.show {
+    display: flex;
+  }
+
+  .icona-hamburger {
+    display: flex;
+    position: absolute;
+    left: 95%;
+  }
+
+  .testo-immagini {
+    margin-left: 5vw;
+    margin-right: 5vw;
+  }
+
+  .testo-immagini img {
+    position: relative;
+    height: auto;
+    background-position: center;
+    background-size: cover;
+    float: none;
+    width: 98% !important;
+    margin-left: 0vw;
+  }
+
+  .testo-immagini p {
+    justify-content: center;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    width: 100%;
+  }
+
+  .Titolo {
+    font-weight: bold;
+    font-size: 3.2vw !important;
+  }
+
+  .Titolo- {
+    font-weight: bold;
+    font-size: 2.9vw !important;
+  }
+
+  .Testo {
+    font-size: 2.5vw !important;
+  }
+
+  .Button_page {
+    border-radius: 4vw !important;
+    font-size: 3vw !important;
+  }
+
+  /*         Aggiungi qua               */
+
+  .Storia {
+    font-size: 3vw !important;
+  }
+
+
+
+
+
+
+}
+
+#preloader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999; /* Sovrapposto sopra tutto il resto */
+}
+
+/* Animazione di pulsazione del logo */
+#logo {
+  width: 200px;
+  height: auto;
+  animation: pulse 1s infinite;
+}
+
+/* Definizione dell'animazione pulsante */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Sezione nascosta fino alla fine dell'animazione */
+.hidden {
+  display: none;
+}
+
+.text-background {
+  position: relative;
+  height: 55vh; /* Altezza del banner */
+  background-image: url('/UniTS Racing/team.jpg'); /* Immagine di sfondo */
+  background-size: cover; /* Adatta l'immagine a coprire l'area */
+  background-position: center; /* Centra l'immagine */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  margin-left: 0vw;
+  margin-right: 0vw;
+}
+
+/* Stile per il testo */
+.text-background h1 {
+  font-size: 5vw; /* Dimensione del testo che si adatta allo schermo */
+  margin: 0;
+}
+
+.testo-immagini img {
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 10px;
+  width: 50%;
+  height: auto;
+  margin-left: 5vw;
+}
+
+.testo-immagini p {
+  text-align: justify;
+  margin-right: 5vw;
+ }
+
+.Titolo {
+font-weight: bold;
+font-size: 1.7vw;
+}
+
+.Testo {
+font-size: 1.3vw;
+}
+
+.Button_div {
+  display: flex;
+  justify-content: center;       /* Centra orizzontalmente */
+  align-items: center;           /* Centra verticalmente */
+  height: auto;
+}
+
+.Button_page {
+  background-color: #ae0e16;   /* Colore di sfondo */
+  color: white;                /* Colore del testo */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 2.6vw;         /* Stondatura del bottone */
+  font-size: 1.8vw;
+  cursor: pointer;             /* Cambia il puntatore su hover */
+  width: auto;
+  display: inline-block;       /* Per evitare che il bottone si allarghi */
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease;  /* Effetto di transizione */
+}
+
+.Button_page:hover {
+  background-color: #800e12;   /* Colore di sfondo quando il bottone è "hoverato" */
+}
+
+
+
+
+/*------------------ Fine prima pagina ------------------*/
+.text-background2 {
+  position: relative;
+  height: 55vh; /* Altezza del banner */
+  background-image: url('/UniTS Racing/Foto_Team2.jpg'); /* Immagine di sfondo */
+  background-size: cover; /* Adatta l'immagine a coprire l'area */
+  background-position: center; /* Centra l'immagine */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  margin-left: 0vw;
+  margin-right: 0vw;
+}
+
+/* Stile per il testo */
+.text-background2 h1 {
+  font-size: 5vw; /* Dimensione del testo che si adatta allo schermo */
+  margin: 0;
+}
+
+.Storia {
+  font-size: 1.4vw;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  text-align: justify;
+}
+
+.Titolo- {
+  font-weight: bold;
+  font-size: 1.5vw;
+}
+
+.PNF {
+  text-align: center;
+  background-color: white;
+  font-size: 5vw;
+}
+
+.PNF2 {
+  text-align: center;
+  background-color: white;
+  font-size: 3vw;
+}
